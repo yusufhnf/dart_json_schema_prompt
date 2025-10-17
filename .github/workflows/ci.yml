@@ -1,0 +1,63 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test:
+    name: Test on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        sdk: [stable, beta]
+    
+    steps:
+    - name: 📚 Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: 🎯 Setup Dart SDK
+      uses: dart-lang/setup-dart@v1
+      with:
+        sdk: ${{ matrix.sdk }}
+        
+    - name: 📦 Install dependencies
+      run: dart pub get
+      
+    - name: 🔍 Analyze code
+      run: dart analyze --fatal-infos
+      
+    - name: 🧪 Run tests
+      run: dart test
+      
+    - name: ✅ Verify package
+      run: dart pub publish --dry-run
+
+  coverage:
+    name: Code Coverage
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📚 Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: 🎯 Setup Dart SDK
+      uses: dart-lang/setup-dart@v1
+      with:
+        sdk: stable
+        
+    - name: 📦 Install dependencies
+      run: dart pub get
+      
+    - name: 📊 Generate coverage
+      run: |
+        dart pub global activate coverage
+        dart pub global run coverage:test_with_coverage
+        
+    - name: 📤 Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        file: coverage/lcov.info

@@ -280,7 +280,7 @@ void validateApiResponse(String jsonResponse) {
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-## �‍💻 Developer Contact
+## 💻 Developer Contact
 
 Connect with the developer behind this package:
 
@@ -290,7 +290,7 @@ Connect with the developer behind this package:
 - [Telegram](https://t.me/yusufhnf) - Join my channel for Flutter tips and tricks
 - [Website](https://yusufhnf.github.io) - Visit my portfolio and blog for more tutorials
 
-## �📄 License
+## 🗂️ License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
