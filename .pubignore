@@ -1,0 +1,12 @@
+# Files and directories to exclude from publishing
+build/
+.dart_tool/
+.packages
+.pub/
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+Thumbs.db

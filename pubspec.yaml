@@ -1,0 +1,31 @@
+name: dart_json_schema_prompt
+description: A powerful Dart package for creating structured prompts with JSON schema specifications and parsing AI responses into strongly-typed objects. Supports both single objects and arrays with validation.
+version: 1.0.0
+homepage: https://github.com/yusufhnf/dart_json_schema_prompt
+repository: https://github.com/yusufhnf/dart_json_schema_prompt
+issue_tracker: https://github.com/yusufhnf/dart_json_schema_prompt/issues
+documentation: https://pub.dev/documentation/dart_json_schema_prompt/latest/
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies: {}
+
+dev_dependencies:
+  test: ^1.25.0
+  lints: ^3.0.0
+
+topics:
+  - json
+  - schema
+  - prompt
+  - parsing
+  - validation
+
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  web:
+  windows:
