@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.1] - 2024-10-17
+## [1.0.1] - 2025-10-17
 
 ### Added
 - Comprehensive GitHub Actions workflows for CI/CD and automated publishing
@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Professional Git Flow workflow implementation
 - Better developer experience with clear contribution guidelines
 
-## [1.0.0] - 2024-10-15
+## [1.0.0] - 2025-10-15
 
 ### Added
 - Initial release of dart_json_schema_prompt package
