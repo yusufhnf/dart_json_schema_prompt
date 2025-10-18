@@ -19,6 +19,19 @@ void main() {
       expect(prompt.schema.required, equals(['name']));
     });
 
+    test('should create a simple prompt with minimal configuration', () {
+      final prompt = JsonSchemaPrompt.simple(
+        instruction: 'Provide a simple response',
+        description: 'A basic prompt for simple outputs',
+      );
+
+      expect(prompt.instruction, equals('Provide a simple response'));
+      expect(prompt.schema.type, equals(SchemaType.object));
+      expect(prompt.schema.properties.isEmpty, isTrue);
+      expect(prompt.strictMode, isFalse);
+      expect(prompt.schema.description, equals('A basic prompt for simple outputs'));
+    });
+
     test('should create an array prompt', () {
       final prompt = JsonSchemaPrompt.forArray(
         instruction: 'List products',

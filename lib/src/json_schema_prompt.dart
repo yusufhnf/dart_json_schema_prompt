@@ -35,6 +35,23 @@ class JsonSchemaPrompt {
     );
   }
 
+  /// Creates a simple prompt configuration with minimal setup.
+  static PromptConfig simple({
+    required String instruction,
+    String? description,
+  }) {
+    return PromptConfig(
+      instruction: instruction,
+      schema: SchemaDefinition(
+        type: SchemaType.object,
+        properties: {},
+        description: description,
+      ),
+      strictMode: false,
+      additionalInstructions: [],
+    );
+  }
+
   /// Creates a prompt configuration for an array response.
   static PromptConfig forArray({
     required String instruction,
